@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio - Túlio de Araujo Taveira</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- MENU DE NAVEGAÇÃO -->
+  <header class="topo">
+    <a href="#inicio" class="logo">Túlio</a>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#habilidades">Habilidades</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#redes">Redes</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <!-- Botão que troca o modo claro/escuro -->
+    <button id="btnTema" class="btn-tema" aria-label="Trocar tema">🌙</button>
+  </header>
+
+  <!-- 1. INÍCIO: console com botão PLAY -->
+  <section id="inicio" class="tela inicio ativa">
+    <div class="console">
+      <div class="joycon azul"><span class="analogico"></span></div>
+      <div class="visor">
+        <h1 class="titulo-play">Portfólio</h1>
+        <button id="btnPlay" class="btn-play">▶ PLAY</button>
+      </div>
+      <div class="joycon vermelho"><span class="analogico"></span></div>
+    </div>
+    <h2 class="nome">Túlio de Araujo Taveira</h2>
+    <!-- O texto abaixo é escrito letra por letra pelo JavaScript -->
+    <p class="frase"><span id="digitando"></span><span class="cursor">|</span></p>
+  </section>
+
+  <!-- MENU DE "JOGOS" (cada quadrado leva a uma parte) -->
+  <section id="menu" class="tela menu-jogos aparece">
+    <p>Escolha um jogo para começar</p>
+    <div class="jogos">
+      <a href="#sobre" class="jogo">Sobre mim</a>
+      <a href="#habilidades" class="jogo">Habilidades</a>
+      <a href="#projetos" class="jogo">Projetos</a>
+      <a href="#redes" class="jogo">Redes sociais</a>
+      <a href="#contato" class="jogo">Contato</a>
+    </div>
+  </section>
+
+  <!-- 2. SOBRE MIM (preto e branco) -->
+  <section id="sobre" class="tela secao sobre aparece">
+    <div class="barra-sobre">
+      <span class="icone-sobre">2</span>
+      <a href="#menu" class="voltar">VOLTAR</a>
+    </div>
+    <h2>SOBRE MIM</h2>
+    <div class="caixa-sobre">
+      <p>Sou estudante e tenho interesse em programação, desenvolvimento de sistemas e tecnologia.</p>
+      <p>Tenho conhecimentos básicos de C#, HTML, CSS e MySQL, e também conhecimentos de hardware. Estou aprendendo mais a cada projeto.</p>
+    </div>
+  </section>
+
+  <!-- 3. HABILIDADES (vermelho) -->
+  <section id="habilidades" class="tela secao habilidades aparece">
+    <div class="barra-vermelha">
+      <h2>Minhas Habilidades</h2>
+      <a href="#menu" class="voltar">VOLTAR</a>
+    </div>
+    <div class="lista-skills">
+      <!-- data-nivel = porcentagem da barra -->
+      <div class="skill"><span>C#</span><div class="barra"><div class="preenche" data-nivel="80"></div></div><b>80%</b></div>
+      <div class="skill"><span>HTML</span><div class="barra"><div class="preenche" data-nivel="80"></div></div><b>80%</b></div>
+      <div class="skill"><span>CSS</span><div class="barra"><div class="preenche" data-nivel="70"></div></div><b>70%</b></div>
+      <div class="skill"><span>MySQL</span><div class="barra"><div class="preenche" data-nivel="60"></div></div><b>60%</b></div>
+      <div class="skill"><span>Hardware</span><div class="barra"><div class="preenche" data-nivel="80"></div></div><b>80%</b></div>
+      <div class="skill"><span>JavaScript</span><div class="barra"><div class="preenche" data-nivel="60"></div></div><b>60%</b></div>
+    </div>
+  </section>
+
+  <!-- 4. PROJETOS -->
+  <section id="projetos" class="tela secao projetos aparece">
+    <h2>Meus Projetos</h2>
+    <div class="cards">
+      <!-- data-nome e data-desc são mostrados no modal -->
+      <article class="card" data-nome="Projeto em C#" data-desc="Programa feito em C# para praticar lógica de programação, variáveis, condições e laços de repetição.">
+        <h3>Projeto em C#</h3>
+        <p>Programa para praticar lógica de programação.</p>
+        <button class="btn-detalhes">Ver detalhes</button>
+        <!-- COLOQUE O LINK DO PROJETO AQUI (troque o #) -->
+        <a href="#" class="btn-link">Abrir</a>
+      </article>
+      <article class="card" data-nome="Projeto de HTML/CSS" data-desc="Página feita só com HTML e CSS para treinar estrutura, cores e layout.">
+        <h3>Projeto de HTML/CSS</h3>
+        <p>Página criada para treinar layout e estilo.</p>
+        <button class="btn-detalhes">Ver detalhes</button>
+        <!-- COLOQUE O LINK DO PROJETO AQUI -->
+        <a href="#" class="btn-link">Abrir</a>
+      </article>
+      <article class="card" data-nome="Projeto de Banco de Dados" data-desc="Modelagem de tabelas e consultas básicas usando MySQL.">
+        <h3>Projeto de Banco de Dados</h3>
+        <p>Tabelas e consultas básicas em MySQL.</p>
+        <button class="btn-detalhes">Ver detalhes</button>
+        <!-- COLOQUE O LINK DO PROJETO AQUI -->
+        <a href="#" class="btn-link">Abrir</a>
+      </article>
+      <article class="card" data-nome="Projeto de Portfólio" data-desc="Este site! Feito com HTML, CSS e JavaScript a partir de um mockup do Figma.">
+        <h3>Projeto de Portfólio</h3>
+        <p>Este site, feito a partir do meu mockup.</p>
+        <button class="btn-detalhes">Ver detalhes</button>
+        <!-- COLOQUE O LINK DO PROJETO AQUI -->
+        <a href="#" class="btn-link">Abrir</a>
+      </article>
+    </div>
+    <p class="voltar-baixo"><a href="#menu" class="btn-link">⬅ Voltar ao menu</a></p>
+  </section>
+
+  <!-- 5. REDES SOCIAIS (azul) -->
+  <section id="redes" class="tela secao redes aparece">
+    <div class="barra-azul">
+      <h2>Redes Sociais</h2>
+      <a href="#menu" class="voltar">VOLTAR</a>
+    </div>
+    <div class="grade-redes">
+      <!-- COLOQUE SEU LINK DO GITHUB AQUI -->
+      <a href="https://github.com/" target="_blank" class="rede github-destaque">
+        <span class="ic">🐙</span>GITHUB
+        <small>Veja meus códigos</small>
+      </a>
+      <!-- COLOQUE SEU LINK DO LINKEDIN AQUI -->
+      <a href="#" class="rede"><span class="ic">in</span>LINKEDIN</a>
+      <!-- SEU E-MAIL -->
+      <a href="mailto:tulio25042008@gmail.com" class="rede"><span class="ic">✉</span>GMAIL<small>tulio25042008@gmail.com</small></a>
+      <!-- SEU TELEFONE -->
+      <a href="tel:+5531994162504" class="rede"><span class="ic">📞</span>TELEFONE<small>+55 (31) 99416-2504</small></a>
+    </div>
+  </section>
+
+  <!-- 6. CONTATO -->
+  <section id="contato" class="tela secao contato aparece">
+    <h2>Contato</h2>
+    <div class="info-contato">
+      <p><strong>Túlio de Araujo Taveira</strong></p>
+      <p>📞 <a href="tel:+5531994162504">+55 (31) 99416-2504</a></p>
+      <p>✉ <a href="mailto:tulio25042008@gmail.com">tulio25042008@gmail.com</a></p>
+    </div>
+    <h3 class="sub-form">Ou envie uma mensagem:</h3>
+    <form id="formulario" novalidate>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" placeholder="Seu nome">
+      <small class="erro" id="erroNome"></small>
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" placeholder="(31) 99999-9999" maxlength="15">
+      <small class="erro" id="erroTelefone"></small>
+
+      <label for="email">E-mail:</label>
+      <input type="text" id="email" placeholder="voce@email.com">
+      <small class="erro" id="erroEmail"></small>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+      <small class="erro" id="erroMensagem"></small>
+
+      <button type="submit" class="btn-enviar">ENVIAR</button>
+      <p id="sucesso" class="sucesso"></p>
+    </form>
+    <p class="voltar-baixo"><a href="#menu" class="btn-link">⬅ Voltar ao menu</a></p>
+  </section>
+
+  <!-- RODAPÉ -->
+  <footer class="rodape">
+    <p><strong>Túlio de Araujo Taveira</strong></p>
+    <p>
+      <a href="https://github.com/" target="_blank">GitHub</a> |
+      <a href="mailto:tulio25042008@gmail.com">E-mail</a> |
+      <a href="tel:+5531994162504">Telefone</a>
+    </p>
+    <p>© 2026 Túlio de Araujo Taveira</p>
+  </footer>
+
+  <!-- MODAL (janela que abre ao clicar em "Ver detalhes") -->
+  <div id="modal" class="modal">
+    <div class="modal-caixa">
+      <h3 id="modalTitulo"></h3>
+      <p id="modalDesc"></p>
+      <button id="fecharModal" class="btn-enviar">Fechar</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
